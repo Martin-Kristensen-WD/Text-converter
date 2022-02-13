@@ -27,6 +27,11 @@ input::placeholder {
   color: rgba(78, 78, 78, 0.596);
 }
 
+select {
+  font-family: 'Poppins', sans-serif;
+  height: 2.5em;
+}
+
 button {
   border: none;
   border-radius: 20px;
