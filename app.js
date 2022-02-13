@@ -1,12 +1,17 @@
 // To uppercase variables
 const uppercaseInput = document.querySelector('#uppercase');
-const uppercaseResult = document.querySelector('.uppercase-result');
+const uppercaseResult = document.querySelector('#uppercase-result');
 const uppercaseSubmit = document.querySelector('#to-uppercase');
 
 // To reverse variables 
 const reverseInput = document.querySelector('#reverse');
-const reverseResult = document.querySelector('.reverse-result');
+const reverseResult = document.querySelector('#reverse-result');
 const reverseSubmit = document.querySelector('#to-reverse');
+
+// Remove spaces variables
+const spacesInput = document.querySelector('#noSpaces');
+const spacesResult = document.querySelector('#spaces-result');
+const spacesSubmit = document.querySelector('#to-nospaces');
 
 
 // FUNCTIONS
@@ -22,9 +27,19 @@ function reverseText() {
    return reverseResult.innerHTML = backward;
 }
 
+// Remove spaces in text 
+function removeSpace() {
+   let withSpace = spacesInput.value;
+   let noSpace = withSpace.split(" ").join("");
+   return spacesResult.innerHTML = noSpace;
+}
+
 
 // Convert to uppercase
 uppercaseSubmit.addEventListener('click', toUppercase);
 
 // Convert to reversed text
-reverseSubmit.addEventListener('click', reverseText); 
+reverseSubmit.addEventListener('click', reverseText);
+
+// Remove spaces
+spacesSubmit.addEventListener('click', removeSpace);

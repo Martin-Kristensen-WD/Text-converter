@@ -20,24 +20,35 @@
 
     <div class="grid">
       <!-- Uppercase converter-->
-      <div class="uppercase-converter">
+      <div class="grid-item">
         <h3>Convert your text to uppercase</h3>
         <input placeholder="Enter your text" id="uppercase" />
         <button id="to-uppercase" type="button">Convert</button>
         <div class="outputflex">
           <p class="output">Result:</p>
-          <p class="uppercase-result"></p>
+          <p id="uppercase-result"></p>
         </div>
       </div>
 
       <!-- Reverse text converter -->
-      <div class="reverse-converter">
+      <div class="grid-item">
         <h3>Reverse your text</h3>
         <input placeholder="Enter your text" id="reverse" />
         <button id="to-reverse" type="button">Convert</button>
         <div class="outputflex">
           <p class="output">Result:</p>
-          <p class="output reverse-result"></p>
+          <p id="reverse-result"></p>
+        </div>
+      </div>
+
+      <!-- Remove spaces in text -->
+      <div class="grid-item">
+        <h3>Spaces not allowed?</h3>
+        <input placeholder="Enter your text" id="noSpaces" />
+        <button id="to-nospaces" type="button">Convert</button>
+        <div class="outputflex">
+          <p class="output">Result:</p>
+          <p id="spaces-result"></p>
         </div>
       </div>
     </div>

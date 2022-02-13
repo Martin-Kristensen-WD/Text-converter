@@ -46,8 +46,7 @@ button {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.uppercase-converter,
-.reverse-converter {
+.grid-item {
   grid-column: span 4;
   padding: 0.5em 1em;
 }
@@ -61,8 +60,7 @@ button {
 }
 
 @media only screen and (min-device-width: 768px) {
-  .uppercase-converter,
-  .reverse-converter {
+  .grid-item {
     grid-column: span 2;
   }
 
@@ -72,8 +70,7 @@ button {
 }
 
 @media only screen and (min-device-width: 1400px) {
-  .uppercase-converter,
-  .reverse-converter {
+  .grid-item {
     grid-column: span 1;
   }
 }
