@@ -9,7 +9,7 @@ body {
 }
 
 h2 {
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 400;
 }
 
@@ -35,6 +35,10 @@ input::placeholder {
 select {
   font-family: 'Poppins', sans-serif;
   height: 2.5em;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: black;
 }
 
 button {
