@@ -19,28 +19,28 @@ const selected = document.querySelector('#selected');
 const repeatResult = document.querySelector('#repeat-result');
 const repeatSubmit = document.querySelector('#repeat-sentence');
 
+// How many letters? variables
+const countInput = document.querySelector('#count');
+const countResult = document.querySelector('#count-result');
+const countSubmit = document.querySelector('#to-count');
 
-// FUNCTIONS
-// Convert input value and return as uppercase
+
 function toUppercase() {
-   return uppercaseResult.innerHTML = uppercaseInput.value.toUpperCase();
+   uppercaseResult.innerHTML = uppercaseInput.value.toUpperCase();
 }
 
-// Reverse the text 
 function reverseText() {
    let forward = reverseInput.value;
    let backward = forward.split("").reverse().join("");
-   return reverseResult.innerHTML = backward;
+   reverseResult.innerHTML = backward;
 }
 
-// Remove spaces in text 
 function removeSpace() {
    let withSpace = spacesInput.value;
    let noSpace = withSpace.split(" ").join("");
-   return spacesResult.innerHTML = noSpace;
+   spacesResult.innerHTML = noSpace;
 }
 
-// Repeat word
 function repeat() {
    let sentence = repeatInput.value;
    let numberOfTimes = selected.value;
@@ -49,6 +49,16 @@ function repeat() {
       wordArray.push(sentence);
    }
    return repeatResult.innerHTML = wordArray.join(' ');
+}
+
+function countLetters() {
+   let wordsToCount = countInput.value;
+   let counter = -1;
+   for (let i = 0; i <= wordsToCount.length; i++) {
+      if (wordsToCount[i] !== ' ')
+         counter++
+   }
+   return countResult.innerHTML = counter;
 }
 
 
@@ -61,5 +71,8 @@ reverseSubmit.addEventListener('click', reverseText);
 // Remove spaces
 spacesSubmit.addEventListener('click', removeSpace);
 
-// Repeat sentence
+// Repeat word
 repeatSubmit.addEventListener('click', repeat);
+
+// How many letters?
+countSubmit.addEventListener('click', countLetters);
